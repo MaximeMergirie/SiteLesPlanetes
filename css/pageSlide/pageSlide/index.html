@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Test PageSlide</title>
+	<meta name="viewport" content="width=device-width, initiale-scale=1" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.pageslide.css">
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>	
+</head>
+
+<body>
+	
+
+	<header>
+		<a class="open" href="#js-menu">Menu</a>
+	</header>
+	<nav id="js-menu" class="menu">
+		<h1>Navigation principale</h1>
+		<ul>
+			<li><a href="#">Accueil</a></li>
+			<li><a href="#">Historique</a></li>
+			<li><a href="#">Catalogue</a>
+				<ul id="sousmenu">
+					<li><a href="#" title="Les planètes intérieures">Les planètes intérieures</a></li>
+					<li><a href="#" title="Les planètes géantes">Les planètes géantes</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Présentation</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	<div role="main">
+	Lorem ipsum
+	</div>
+  	<footer>
+	</footer>
+
+
+	<script type="text/javascript" src="js/jquery.pageslide.min.js"></script>
+	<!--on ne met pas le script dans le head car le plug-in crée une div-->
+	<script type="text/javascript">
+		$(".open").pageslide();
+	</script>
+</body>
+</html>

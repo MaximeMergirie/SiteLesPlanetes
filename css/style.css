@@ -1,0 +1,934 @@
+html{
+    font-size:62.5%;   
+}
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0; 
+}
+#container{
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+    background: black;
+    border-radius : 5px;
+    box-shadow: 0px 0px 5px 0px white;
+    font-family: 'Audiowide', cursive;
+    position: relative;
+    overflow: hidden;
+}
+header{
+   width:100%;
+}
+header img{
+   width: 100%;
+   height: auto;
+}
+@media screen and (max-width:600px){
+   #container{
+      width: 100%;
+  }
+}
+/*---------Menu ------------------------------------------*/
+nav{
+    width: 100%;
+    background: black;
+    margin: 0;
+    padding: 0;
+ }
+ #menu {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background: black;
+ }
+ nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+ }
+ #menu>li {
+    vertical-align: top;
+    width: 24%;
+    margin-right: -0.25em;
+    border: white;
+    border-radius : 5px;
+    margin: 0;
+    position: relative;
+ }
+ #menu li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right, #4c4c4c,black);
+   text-align: center;
+   border: 1px solid white;
+   font-size: 0.9em;
+   border-radius: 20px 20px 0px 20px;
+   font-family: 'Audiowide', cursive;
+ }
+ /* #menu a:hover{
+    transition: 2s;
+ } */
+ #sousmenu li {
+    padding-top: 0.5em;
+ }
+ #sousmenu{
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    transition: 2s;
+ }
+ #menu li:hover #sousmenu{
+    max-height: 250px;
+    transition: 2s;
+ }
+ /*----------------------------FOOTER----------------------------*/
+#footer{
+   display: flex;
+   width: 100%;
+   height: 3.7em;
+   justify-content: space-around;
+   align-items: center;
+   background-image: url(../img/footer.jpg);
+   margin: 0 auto;
+}
+.liensFooter{
+   display: flex;
+   justify-content: space-around;
+   width: 70%;
+   margin-bottom: 1em;
+}
+#footer p{
+   color: white;
+}
+#footer a{
+   text-decoration: none;
+   color: white;
+}
+@media screen and (max-width:600px){
+   #footer{
+      display: flex;
+      width: 100%;
+      height: 3.7em;
+      justify-content: space-around;
+      align-items: center;
+      background-image: url(../img/footer.jpg);
+      margin: 0 auto;
+      background-size:cover ;
+      background-position: top right;
+   }
+   .liensFooter{
+      display: flex;
+      justify-content: space-around;
+      width: 70%;
+      margin-bottom: 1em;
+   }
+   #footer p{
+      color: white;
+   }
+   #footer a{
+      text-decoration: none;
+      color: white;
+   }
+}
+@media screen and (max-width:600px){
+   .liensFooter{
+      width: 100%;
+   }
+
+}
+
+ /*************************************Menu mobile***********************************/
+ .open{
+	display:block;
+	width:40px;
+	height:30px;
+	background: url(../img/menu.png) center no-repeat #999;
+	border-radius:8px;
+	text-indent:-999em;
+}
+.menu{
+   display:none;
+}
+#pageslide .menu{
+   display:block;
+   text-align: center;
+}
+#pageslide .menu p{
+  font-size:1.5em;
+  background-color: #333;
+  font-family: 'Audiowide', cursive;
+}
+#pageslide .menu ul{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   background-color: #333;
+}
+#pageslide .menu ul li{
+   width: 100%;
+   margin-top:1em ;
+}
+#lienCache{
+	display: none;
+}
+#asideAccueil{
+   display: none;
+}
+#pageslide .menu a{
+   display: block;
+   text-decoration: none;
+   color: white;
+   background: linear-gradient(to right, #4c4c4c,black);
+  text-align: center;
+  border: 1px solid white;
+  font-size: 1em;
+  border-radius: 20px 20px 0px 20px;
+}
+@media only screen and (min-width:600px){
+.menu{
+	display:block;
+}
+.open{
+	display:none;
+}
+#lienCache{
+	display: block;
+}
+#asideAccueil{
+   display: block;
+}
+}
+/*--------------------Main-------------------------------*/
+main{
+   display: flex;
+   justify-content: space-around;
+   overflow: hidden;
+   padding-bottom: 1.5em ;
+}
+/************************aside Accueil******************************/
+#asideAccueil {
+   width: 25%;
+   color:white;
+   }
+   #asideAccueil ul {
+      width: 100%;
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+  }
+  .content{
+      width: 100%;
+      cursor: pointer;
+      background: #4c4c4c;
+      border-radius: 5em ;
+  }
+  #asideAccueil h3 {
+      width: 100%;
+      font-style: italic;
+      font-weight: bold;
+      margin: 0.2em;
+      padding-left: 0.5em;
+  }
+  #asideAccueil li{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 1.5em;
+  }
+  #asideAccueil p {
+      display :none;
+      width: 100%;
+      padding-left: 0.5em;
+      text-align: justify ;
+  }   
+/***************************Section Accueil******************/ 
+#sectionAccueil{
+   width: 65%;
+   border: white 1px solid;
+   box-shadow: 5px 5px 10px 2px white;
+   display: flex;
+   flex-wrap: wrap;
+   margin: 1em;
+   }
+#sectionAccueil #article1{
+      width: 100%;
+      background: black;
+      margin: 0.5em;
+   }
+ #sectionAccueil #article1 img{
+      width: 100%;
+      height: auto;
+   } 
+#sectionAccueil #article1 h1{
+   color: white;
+   text-align: center;
+   font-size:1.6em;
+   padding-bottom: 0.2em;
+}
+#sectionAccueil #article2{
+   width: 100%;
+   margin: 0.5em;
+   background: black;
+   display: flex;
+   justify-content: space-around;
+}
+
+#sectionAccueil #article2 figure{
+   width: 100%;
+}
+#sectionAccueil #article2 img{
+   width: 100%;
+   height: auto;
+}
+#sectionAccueil #article2 figcaption{
+   width: 100%;
+   height: auto;
+   text-decoration: underline;  
+}
+#sectionAccueil #article2 a{
+   width: 30%;
+   color: white;
+   text-align: center;
+   text-decoration: none;  
+}
+#sectionAccueil #article2 a:hover{
+   transform: rotate(45deg) scale(1.1);
+   transition: 1s;
+}
+@media screen and (max-width:600px){
+   #sectionAccueil{
+   width: 100%;
+   border: none;
+   box-shadow: none;
+   display: flex;
+   margin : 0;
+   margin-top:0.8em;
+   margin-bottom:8em ;
+   flex-wrap: wrap;
+   font-family: 'Audiowide', cursive;
+      }
+   #sectionAccueil #article1{
+         width: 100%;
+         background: black;
+         margin : 0;
+      } 
+   #sectionAccueil #article1 img{
+      width: 100%;
+      height: auto;
+   }
+   #sectionAccueil #article1 h1{
+      color: white;
+      text-align: center;
+      font-size: 1.3em;
+      padding-bottom: 0.5em;
+   }
+   #sectionAccueil #article2{
+      width: 100%;
+      margin: 0.5em;
+      background: black;
+      display: flex;
+      justify-content: space-around;
+      margin : 0;
+      margin-top:0.5em;
+   }
+   #sectionAccueil #article2 a{
+      color: white;
+      text-align: center;   
+   }
+   #sectionAccueil #article2 a:hover{
+      transform: none;
+      transition: none;
+   }
+}
+/************************Animation astronaute**********************/
+#astronaute{
+   width: 84px;
+   height: 88px;
+   background: url(../img/cosmonaute.png);
+   position: absolute;
+   top:600px;
+   left : -100px;
+   animation-name: cosmo;
+   animation-duration: 7s;
+   animation-timing-function: ease-out;
+   animation-direction: alternate;
+   animation-iteration-count: infinite;
+}
+@keyframes cosmo{
+   0%{
+      top:600px;
+      left:-100px;
+      transform : scale(0) rotate(0deg);
+   }
+   10%{
+      top:600px;
+      left:-100px;
+      transform : scale(0) rotate(0deg);
+   }
+   90%{
+      top:300px;
+      left: 840px;
+      transform : scale(1) rotate(360deg);
+   }
+   100%{ top:300px;
+      left: 840px;
+      transform : scale(1) rotate(360deg);
+   }
+}
+#astronaute p{
+   color : white;
+   margin-left:4em;
+   margin-top:2em;
+   display: none;
+}
+#astronaute:hover p{
+   display: block;
+}
+#astronaute:hover{
+   animation-play-state: paused;
+}
+@media screen and (max-width:600px){
+   #astronaute{
+      display: none;
+   }
+}
+/*#####################PAGE PRESENTATION########################*/
+/**********************Aside presentation***********************/
+#asidePresentation{
+   width: 25%;
+   color:white;
+   margin: 1em;
+}
+#asidePresentation p{
+   width: 100%;
+   height: auto;
+   margin-top: 1em;
+}
+/***********************Section presentation************************/
+#sectionPresentation{
+   width: 65%;
+   border: white 1px solid;
+   box-shadow: 5px 5px 10px 2px white;
+   display: flex;
+   flex-wrap: wrap;
+   margin: 1em;
+   text-align: center;  
+}
+#sectionPresentation h1{
+   width: 100%;
+   color: white;
+   padding-top: 1.5em;
+   padding-bottom: 1.5em;
+   font-size: 1.2em;
+   text-align: center;  
+}
+#sectionPresentation iframe{
+   width: 100%;
+}
+
+/******************Responsive*******************/
+@media screen and (max-width:600px){
+#mainPresentation{
+   width: 100%;
+   flex-direction: column;
+   align-items: center;
+   margin:none;
+}
+#asidePresentation{
+   width: 90%;
+   margin:0;
+}
+#asidePresentation p{
+  padding : 0.5em;
+  margin:0;
+  width: 100%;
+}
+#sectionPresentation{
+   width: 90%;
+   margin :0;
+}
+#sectionPresentation iframe{
+   width: 100%;
+}
+}
+/*##########################PAGE PLANETES GEANTES############################*/
+#bigPlanet{
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin-bottom: 4em;
+}
+#bigPlanet h2{
+   width: 100%;
+   color: white;
+   text-align: center;
+   padding: 2em;
+}
+#bigPlanet figure{
+   cursor: pointer;
+}
+#bigPlanet #jupiter{
+   width: 25%;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+}
+#bigPlanet #saturne{
+   width: 25%;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+}
+#bigPlanet #uranus{
+   width: 17%;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+}
+#bigPlanet #neptune{
+   width: 16%;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+}
+#bigPlanet figure img{
+   width: 100%;
+   height: auto;
+}
+#bigPlanet figure figcaption{
+   width: 100%;
+   color: white;
+}
+/*###############Popup###################################*/
+#popup{
+   width: 60%;
+   height: 30em;
+   position: absolute;
+   top:10em;
+   left: 20em;
+   background: url(../img/ciel.jpg);
+   border-radius: 10px;
+   box-shadow: 0px 0px 5px 0px white;
+   display: none;
+}
+#menuPopup{
+   width: 100%;
+   display: flex;
+}
+#imgPopup{
+   width: 17%;
+   height: 5.5em;
+   position: relative;
+}
+.image{
+   width: 50%;
+   height: auto;
+   position: absolute;
+   left:25%;
+   top:10%;
+}
+.imageSaturne{
+   width: 50%;
+   height: auto;
+   position: absolute;
+   left:25%;
+   top:40%;
+}
+#nomLogo{
+   width: 70%;
+   color: white;
+   font-size:1.5em;
+   margin-top: 2.5em;
+   font-family: 'Audiowide', cursive;
+}
+#menuPopup span{
+   width: 10%;
+   height: 3em;
+   padding: 0.5em;
+   display: flex;
+   justify-content: center;
+}
+#close{
+   width: 40%;
+   color: white;
+   text-align: center;
+   border-radius: 10px;
+   padding: 0.2em;
+   font-size:2em;
+   border:white 1px solid;
+   cursor: pointer;
+}
+#texte{
+   width: 100%;
+   color: white;
+}
+#texte p{
+   width: 95%;
+   margin:1em;
+   font-family: 'Audiowide', cursive;
+}
+/*#########################"Page planètes intérieures##########################*/
+/*------------------------------Main-----------------------------*/
+#mainPlanetInt{
+   display: flex;
+   margin: 0;
+   padding: 0;
+}
+/*..............Aside......................................*/
+#asidePlanetInt{
+   width: 30%;
+   }
+#asidePlanetInt h3{
+   color: white;
+   text-align: center;
+   width: 100%;
+   font-size: 1.1em;
+   margin-top: 4em ;
+}
+#asidePlanetInt div{
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 2em;
+}
+#asidePlanetInt input{
+   width: 30%;
+   color: white;
+   background: gray;
+   border: none;
+   margin-top: 1em ;
+   cursor: pointer;
+
+}
+#asidePlanetInt input:focus{
+outline: 0;  
+}
+#asidePlanetInt #buttonReset{
+   margin-top: 3em;
+}
+/*..............................Section..................................*/
+#sectionPlanetInt{
+   width: 70%;
+   height: 30em;
+}
+#solaire{
+   width: 100%;
+   height: 30em;
+   display: flex;
+   align-items: center; 
+   position: relative;
+}
+/*********************************************/
+/*----------------Animation Mars------------------*/
+.animationMars{
+   animation: tourne 6.87s linear infinite;
+}
+/***************************************************/
+#orbiteMars{
+   width: 43em;
+   height: 43em;
+   border-radius : 100%;
+   position: absolute;
+   right: 2em;
+}
+#mars{
+   width:2.7%;
+   height: 1.2em;
+   background: url(../img/mars.png);
+   position: absolute;
+   right: 42.5em;
+   top:21em;
+}
+/*********************************************/
+/*----------------Animation Terre------------------*/
+.animationTerre{
+   animation: tourne 3.65s linear infinite;
+}
+/***************************************************/
+#orbiteTerre{
+   width: 30em;
+   height: 30em;
+   border-radius : 100%;
+   position: absolute;
+   right: 8em;
+}
+#terre{
+   width: 7.5%;
+   height: 2.1em;
+   background: url(../img/terre.png);
+   position: absolute;
+   right: 29em;
+   top:14em;
+}
+/*********************************************/
+/*----------------Animation Venus------------------*/
+.animationVenus{
+   animation: tourne 2.55s linear infinite;
+}
+/***************************************************/
+#orbiteVenus{
+   width: 25em;
+   height: 25em;
+   border-radius : 100%;
+   position: absolute;
+   right: 10.5em;
+}
+#venus{
+   width: 8.5%;
+   height: 2.1em;
+   background: url(../img/venus.png);
+   position: absolute;
+   right: 24em;
+   top:11.5em;
+}
+/*********************************************/
+/*----------------Animation Mercure------------------*/
+.animationMercure{
+   animation: tourne 0.88s linear infinite;
+}
+/*********************************************/
+#orbiteMercure{
+   width: 20em;
+   height: 20em;
+   border-radius : 100%;
+   position: absolute;
+   right: 12.9em;
+}
+#mercure{
+   width: 4%;
+   height: 0.9em;
+   background: url(../img/mercure.png);
+   position: absolute;
+   top:9.7em;
+   right: 19.6em;
+}
+/****************************************************/
+#soleil{
+   width: 40%;
+   height: 18em;
+   background: url(../img/soleil.png);
+   position: absolute;
+   right: 14em;
+}
+/*******************Animation**********************/
+@keyframes tourne{
+   100%{ transform: rotate(360deg);}
+}
+/*#############################Page Contact######################################*/
+/*----------------Aside Contact------------------------------*/
+#mainContact{
+   display: flex;
+}
+#asideContact{
+   width: 60%;
+   background: black;
+   color: white;
+}
+#asideContact h3{
+   width: 100%;
+   text-align: center;
+   padding-top:2em;
+   padding-bottom:2em;
+}
+#asideContact form{
+   width: 100%;
+   margin-left: 2em;
+}
+#asideContact p{
+   width: 95%;
+   margin: 0 auto;
+   margin-bottom:0.5em ;
+   /* display: flex; */
+   /* display: flex;
+   flex-wrap: wrap; */
+}
+#asideContact p label{
+   width: 25%;
+   display: inline-block;
+}
+#asideContact p input{
+   width: 55%;
+   border-radius: 0.5em;
+   padding-left: 0.5em;
+   color: white   ;
+}
+#asideContact p input:focus{
+  background:gray;
+  transition: 0.5s;
+  outline: none;
+}
+::placeholder{
+   font-style: italic;
+}
+:focus::placeholder{
+   color: white;
+   font-style: italic;
+}
+#asideContact p .sexe{
+   width: 23%;
+}
+#asideContact p .extraTerrestre{
+   width: 28%;
+}
+#asideContact p .homme{
+   width: 12%;
+}
+#asideContact p .femme{
+   width: 12%;
+}
+#asideContact p .test2{
+   width: 5%;
+   margin-right: -0.8em;
+}
+#asideContact p textarea{
+   width: 55%;
+   height: 30%;
+   border-radius:5px;
+}
+#asideContact p textarea:focus{
+   background:gray;
+   transition: 0.5s;
+   outline: none;
+   color: white;
+ }
+#alertNom , #alertMail{
+   font-size: 1.5em;
+}
+#asideContact p #reset{
+   width: 20%;
+   background: gray;
+}
+#asideContact p #envoyer{
+   width: 15%;
+   margin-left:0.5em;
+   background: gray;
+}
+#asideContact p #envoyer:focus, #asideContact p #reset:focus{
+   background: gray;
+   outline: none;
+ }
+/*****************Section Contact********************/
+#sectionContact{
+   width: 40%;
+   background: black;
+}
+
+#sectionContact div{
+   text-align: center;
+   margin: 1em auto;
+   color: white;
+   cursor: pointer;
+   animation: tourneAdresse 2s;
+}
+@keyframes tourneAdresse{
+   0%{ transform: rotate(0deg) scale(0);}
+    50%{ transform: rotate(720deg) scale(2);}
+    100%{ transform: rotate(720deg);}
+}
+
+#maps{
+   width: 90%;
+   margin-left:5%;
+   height: 20em;
+   position: relative;
+   left: 400px;
+   transition: 1s;
+}
+
+#sectionContact:hover iframe{
+left:0;
+}
+
+/******************Page contact version mobile**********************/
+@media screen and (max-width:600px){
+
+/************ASide Contact*********************/  
+   #mainContact{
+      display: flex;
+      flex-direction: column;
+   }
+   #asideContact{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+   }
+   #asideContact form{
+      width: 93%;
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+   }
+   #asideContact p{
+      width: 100%;
+      margin:0;
+      margin-bottom:0.5em ;
+   }
+   #asideContact p label{
+      width: 100%;
+      margin-bottom:0.2em ;
+   }
+   #asideContact p input{
+      width: 100%;
+   }
+   #asideContact p .sexe{
+      width: 100%;
+   }
+   #asideContact p .extraTerrestre{
+      width: 38%;
+      font-size: 0.9em;
+   }
+   #asideContact p .homme, #asideContact p .femme{
+      width: 12%;
+     font-size: 0.9em;
+   }
+   #asideContact p .test2{
+      width: 8%;
+      margin-left:1em ;
+   }
+   #asideContact p textarea{
+      width: 100%;
+   }
+#file,  #asideContact span {
+      display: none;
+   }
+   #asideContact p #reset{
+      width: 25%;
+      padding: 0.3em;
+   }
+   #asideContact p #envoyer{
+      width: 20%;
+      margin-left:0em;
+      padding: 0.3em;
+   }
+/************Section Contact mobile*********************/   
+   #sectionContact{
+      width: 100%;
+      background: black;
+   }
+   #sectionContact div{
+      text-align: center;
+      margin: 1em auto;
+      color: white;
+      animation: none;
+   }
+   #maps{
+      width: 90%;
+      margin-left:5%;
+      height: 20em;
+      left: 0px;
+   }
+  
+}
+
+
+
